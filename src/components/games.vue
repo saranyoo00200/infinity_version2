@@ -2,7 +2,7 @@
   <div class="container shadow">
     <div>
       <br />
-      <h1 class="text-center mb-5 colorf" style="font-size:40px;">
+      <h1 class="text-center mb-3 colorf" style="font-size:20px;">
         <b>Infinity War Game</b>
       </h1>
       <div class="container">
@@ -46,23 +46,23 @@
       </div>
       <br />
       <div class="text-center mb-5">
-        <button class="btn  btn-outline-danger" @click="start">
+        <button class="btn  btn-outline-danger cf" @click="start">
           START
         </button>
-        <button class="btn  btn-outline-primary" @click="attack">
+        <button class="btn  btn-outline-primary cf" @click="attack">
           ATTACK
         </button>
-        <button class="btn  btn-outline-success" @click="SpecialAttack">
+        <button class="btn  btn-outline-success cf" @click="SpecialAttack">
           Special Attack
         </button>
-        <button class="btn  btn-outline-warning" @click="reloadPage">
+        <button class="btn  btn-outline-warning cf" @click="reloadPage">
           Restart
         </button>
       </div>
       <hr style="border: 1px solid red;" />
     </div>
     <div class="text-center">
-      <p class="mb-2 colorf" style="font-size:30px;"><b>[คู่มือการเล่น]</b></p>
+      <p class="mb-2 colorf" style="font-size:20px;"><b>[คู่มือการเล่น]</b></p>
       <p class="colorf">
         -ตัวละคร Hero : Anakin Skywalker, Iron man, Doraemon <br />
         -ตัวละคร Monster : Thanos, Darth vader, Cell <br />
@@ -107,7 +107,7 @@ export default {
           image: [require("../assets/Darthvader.png")],
         },
         {
-          name: "Cell (Dragon Ball)",
+          name: "Cell (DB)",
           hp: 105,
           image: [require("../assets/call.png")],
         },
@@ -167,23 +167,26 @@ export default {
 <style>
 .colorf {
   color: yellow;
-  font-size: px;
+  font-size: 10px;
 }
 #monsterHealth {
   width: 100%;
-  height: 30px;
+  height: 15px;
   background-color: #eee;
   transition: 0.5s all;
   border-radius: 10px;
 }
 #heroHealth {
   width: 100%;
-  height: 30px;
+  height: 15px;
   background-color: #eee;
   transition: 0.5s all;
   border-radius: 10px;
 }
 .high {
   height: 100px;
+}
+.cf {
+  font-size: 10px;
 }
 </style>
