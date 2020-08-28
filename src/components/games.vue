@@ -3,55 +3,57 @@
     <div>
       <br />
       <h1 class="text-center mb-5 colorf" style="font-size:40px;">
-        <b>The Infinity War</b>
+        <b>Infinity War Game</b>
       </h1>
-      <div class="row mb-3 text-center colorf">
-        <div class="col-sm">
-          <p>Hero: {{ hero.name }}</p>
+      <div class="container">
+        <div class="row mb-3 text-center colorf">
+        <div class="col">
+          <p>Hero : {{ hero.name }}</p>
           <p><img :src="hero.image" height="100px" class="img-fluid high" /></p>
           <div>
-            <section id="userHealth">
+            <section id="heroHealth">
               <div
                 id="heroHealth"
                 style="background-color: green; width: 100%;text-align: center;color: #fff;"
                 :style="{ width: hero.hp + '%' }"
               >
-                {{ hero.hp + "%" }}
+                {{ hero.hp  + '%' }}
               </div>
             </section>
           </div>
         </div>
-        <div class="col-sm">
-          <p style="font-size: 30px;">VS</p>
+        <div class="col">
+          <p style="font-size: 30px; margin-top: 50px;">VS</p>
         </div>
         <div class="col">
-          <p>Monster: {{ mon.name }}</p>
+          <p>Monster : {{ mon.name }}</p>
           <p><img :src="mon.image" class="img-fluid high" /></p>
           <div>
-            <section id="userHealth">
+            <section id="monsterHealth">
               <div
                 id="monsterHealth"
                 style="background-color: green;width: 100%;text-align: center;color: #fff;"
                 :style="{ width: mon.hp + '%' }"
               >
-                {{ mon.hp + "%" }}
+                {{ mon.hp + '%'}}
               </div>
             </section>
           </div>
         </div>
       </div>
+      </div>
       <br />
       <div class="text-center mb-5">
-        <button class="btn btn-lg btn-outline-danger" @click="start">
+        <button class="btn  btn-outline-danger" @click="start">
           START
         </button>
-        <button class="btn btn-lg btn-outline-primary" @click="attack">
+        <button class="btn  btn-outline-primary" @click="attack">
           ATTACK
         </button>
-        <button class="btn btn-lg btn-outline-success" @click="SpecialAttack">
+        <button class="btn  btn-outline-success" @click="SpecialAttack">
           Special Attack
         </button>
-        <button class="btn btn-lg btn-outline-warning" @click="reloadPage">
+        <button class="btn  btn-outline-warning" @click="reloadPage">
           Restart
         </button>
       </div>
@@ -102,7 +104,7 @@ export default {
           hp: 102,
           image: [require("../assets/Darthvader.png")],
         },
-        { name: "Cell", hp: 105, image: [require("../assets/call.png")] },
+        { name: "Cell (Dragon Ball)", hp: 105, image: [require("../assets/call.png")] },
       ],
       hero: "",
       mon: "",
@@ -159,23 +161,23 @@ export default {
 <style>
 .colorf {
   color: yellow;
-  font-size: 30px;
+  font-size: px;
 }
 #monsterHealth {
   width: 100%;
-  height: 50px;
+  height: 30px;
   background-color: #eee;
   transition: 0.5s all;
   border-radius: 10px;
 }
 #heroHealth {
   width: 100%;
-  height: 50px;
+  height: 30px;
   background-color: #eee;
   transition: 0.5s all;
   border-radius: 10px;
 }
 .high {
-  height: 300px;
+  height: 100px;
 }
 </style>
